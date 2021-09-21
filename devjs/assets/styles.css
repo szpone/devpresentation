@@ -1,48 +1,22 @@
-@import url(//db.onlinewebfonts.com/c/49fd27bd9fc2d456041e18185f31c873?family=Foundry+Gridnik);
-@import url(//db.onlinewebfonts.com/c/c66a8c8c0b5ca45e72dd64fdd13edb49?family=FF+Nexus+Sans);
-
-@font-face {
-    font-family: "Foundry Gridnik";
-    src: url("//db.onlinewebfonts.com/t/49fd27bd9fc2d456041e18185f31c873.eot");
-    src: url("//db.onlinewebfonts.com/t/49fd27bd9fc2d456041e18185f31c873.eot?#iefix")
-    format("embedded-opentype"), url("//db.onlinewebfonts.com/t/49fd27bd9fc2d456041e18185f31c873.woff2")
-    format("woff2"), url("//db.onlinewebfonts.com/t/49fd27bd9fc2d456041e18185f31c873.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/49fd27bd9fc2d456041e18185f31c873.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/49fd27bd9fc2d456041e18185f31c873.svg#Foundry Gridnik") format("svg");
-}
-
-@font-face {
-    font-family: "FF Nexus Sans";
-    src: url("//db.onlinewebfonts.com/t/c66a8c8c0b5ca45e72dd64fdd13edb49.eot");
-    src: url("//db.onlinewebfonts.com/t/c66a8c8c0b5ca45e72dd64fdd13edb49.eot?#iefix")
-    format("embedded-opentype"), url("//db.onlinewebfonts.com/t/c66a8c8c0b5ca45e72dd64fdd13edb49.woff2")
-    format("woff2"), url("//db.onlinewebfonts.com/t/c66a8c8c0b5ca45e72dd64fdd13edb49.woff")
-    format("woff"), url("//db.onlinewebfonts.com/t/c66a8c8c0b5ca45e72dd64fdd13edb49.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/c66a8c8c0b5ca45e72dd64fdd13edb49.svg#FF Nexus Sans") format("svg");
-}
-
-@font-face {
-font-family: Chapparal Pro;
-font-style: normal;
-src:url("fonts/chaparral-pro-subhead.ttf");
-}
-
 .title {
-    font-family: "Foundry Gridnik", sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
+    color: #323638 !important;
 }
 
 .main {
-    letter-spacing: 0.5em !important;
+    letter-spacing: 0.1em !important;
+    color: #323638 !important;
+
 }
 
 .subtitle {
-    font-family: "FF Nexus Sans", sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
     letter-spacing: 10px !important;
     font-size: 70px !important; ;
 }
 
 .paragraph {
-    font-family: "Chapparal Pro", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .img-circle {
@@ -73,3 +47,4 @@ src:url("fonts/chaparral-pro-subhead.ttf");
 .italic {
     font-style: italic;
 }
+
