@@ -44,7 +44,6 @@ Piotr Rygielski &amp; Nikola Adamus
 <section id="część-i---anuglarj.js" class="title-slide slide level1 title" data-background-image="./assets/background.jpg">
 <h1 class="title" data-background-image="./assets/background.jpg">CZĘŚĆ I - Anuglarj.js</h1>
 <p><img data-src="assets/meme.jpg" /></p>
-<p><link rel="stylesheet" type="text/css" href="assets/styles.css"></p>
 </section>
 <section id="kluczowe-sprawy" class="slide level2 title main" data-background-image="./assets/background.jpg">
 <h2 class="title main" data-background-image="./assets/background.jpg">3 kluczowe sprawy</h2>
@@ -93,7 +92,75 @@ Opłacalność utrzymania
 Lepsza elastyczność kodu
 </li>
 </ul>
+</section>
+<section id="stack-technologiczny" class="slide level2 title main" data-background-image="./assets/background.jpg">
+<h2 class="title main" data-background-image="./assets/background.jpg">Stack technologiczny</h2>
+<ul class="paragraph">
+<li>
+Typescript
+</li>
+<li>
+Saga + Redux
+</li>
+<li>
+Storybook
+</li>
+</ul>
 </section></section>
+<section>
+<section id="część-iii---integracja" class="title-slide slide level1 title main" data-background-image="./assets/background.jpg">
+<h1 class="title main" data-background-image="./assets/background.jpg">CZĘŚĆ III - Integracja</h1>
+
+</section>
+<section id="dlaczego-nie-micro-frontends" class="slide level2 title main" data-background-image="./assets/background.jpg">
+<h2 class="title main" data-background-image="./assets/background.jpg">Dlaczego nie Micro Frontends?</h2>
+<p><img data-src="assets/microf.png" /></p>
+</section>
+<section id="osadzanie-reacta-w-angularze" class="slide level2 title main" data-background-image="./assets/background.jpg">
+<h2 class="title main" data-background-image="./assets/background.jpg">Osadzanie Reacta w Angularze</h2>
+</section>
+<section id="section-1" class="slide level2 title main" data-background-image="./assets/background.jpg">
+<h2 class="title main" data-background-image="./assets/background.jpg"></h2>
+<pre><code>
+(function (angular, TellyoPro) {
+  window.directify = function directify(ReactComponent, wrapper) {
+    return [
+      "rReduxStore",
+      function (rReduxStore) {
+        return {
+          restrict: "E",
+          link: function (scope, element, attrs) {
+            ReactDOM.render(
+              render(ReactComponent, attrs, rReduxStore, wrapper),
+              element[0]
+            );
+
+            scope.$on("$destroy", function () {
+              console.warn("ReactDOM.unmountComponentAtNode ", element[0]);
+              ReactDOM.unmountComponentAtNode(element[0]);
+            });
+
+            Object.keys(attrs.$attr).forEach(function (attrKey) {
+              attrs.$observe(attrKey, function () {
+                ReactDOM.render(
+                  render(ReactComponent, attrs, rReduxStore, wrapper),
+                  element[0]
+                );
+              });
+            });
+          },
+        };
+      },
+    ];
+  };
+
+</code> </pre>
+</section></section>
+<section id="wielkie-dzięki" class="title-slide slide level1 title main" data-background-image="./assets/background.jpg">
+<h1 class="title main" data-background-image="./assets/background.jpg">Wielkie dzięki!</h1>
+<p><img data-src="assets/thatsall.png" class="image" /></p>
+<p><link rel="stylesheet" type="text/css" href="assets/styles.css"></p>
+</section>
     </div>
   </div>
 

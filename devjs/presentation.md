@@ -12,7 +12,6 @@
 
 ![](assets/meme.jpg)
 
-<link rel="stylesheet" type="text/css" href="assets/styles.css">
 
 ## 3 kluczowe sprawy {.title .main data-background-image="./assets/background.jpg"}
 
@@ -54,20 +53,55 @@
 </ul>
 
 
-# CZĘŚĆ III - Integracja {.title data-background-image="./assets/background.jpg"}
+# CZĘŚĆ III - Integracja {.title .main data-background-image="./assets/background.jpg"}
 
-## Dlaczego nie Micro Frontends?
+## Dlaczego nie Micro Frontends? {.title .main data-background-image="./assets/background.jpg"}
 
 ![](assets/microf.png)
 
-## Osadzanie Reacta w Angularze
+## Osadzanie Reacta w Angularze {.title .main data-background-image="./assets/background.jpg"}
 
-<kod>
+## {.title .main data-background-image="./assets/background.jpg"}
 
-# Wielkie dzięki! {.title data-background-image="./assets/background.jpg"}
+<pre><code>
+(function (angular, TellyoPro) {
+  window.directify = function directify(ReactComponent, wrapper) {
+    return [
+      "rReduxStore",
+      function (rReduxStore) {
+        return {
+          restrict: "E",
+          link: function (scope, element, attrs) {
+            ReactDOM.render(
+              render(ReactComponent, attrs, rReduxStore, wrapper),
+              element[0]
+            );
 
-![](assets/thatsall.png)
+            scope.$on("$destroy", function () {
+              console.warn("ReactDOM.unmountComponentAtNode ", element[0]);
+              ReactDOM.unmountComponentAtNode(element[0]);
+            });
+
+            Object.keys(attrs.$attr).forEach(function (attrKey) {
+              attrs.$observe(attrKey, function () {
+                ReactDOM.render(
+                  render(ReactComponent, attrs, rReduxStore, wrapper),
+                  element[0]
+                );
+              });
+            });
+          },
+        };
+      },
+    ];
+  };
+
+</code> </pre>
+
+# Wielkie dzięki! {.title .main data-background-image="./assets/background.jpg"}
+
+![](assets/thatsall.png){.image}
 
 
 
-
+<link rel="stylesheet" type="text/css" href="assets/styles.css">
