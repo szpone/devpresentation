@@ -35,4 +35,6 @@ body {
 
 code {
     font-size: 15px !important;
+    color: #dcdccc;
+    background: #383838;
 }

@@ -1,6 +1,5 @@
 <link rel="stylesheet" type="text/css" href="assets/styles.css">
 
-
 # Stare, nowe i najnowsze - jak podążać za zmianami trendów  {.title .main data-background-image="./assets/background.jpg"}
 
 <p class="paragraph">Piotr Rygielski & Nikola Adamus</p>
@@ -96,8 +95,7 @@
 ReactDOM.render(<h1>Tellyo world! </h1>,  document.getElementById('root'));
 ```
 
-
-## {.title .main data-background-image="./assets/background.jpg"}
+## A jednak nie do końca {.title .main data-background-image="./assets/background.jpg"}
 
 <pre><code class="hljs">
 var React = window.React;
