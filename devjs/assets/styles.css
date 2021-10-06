@@ -2,19 +2,20 @@ body {
     font-family: "Roboto", sans-serif !important;
 }
 
-.title {
-    color: #323638 !important;
-    font-size: 50px !important;
+.reveal section.slide {
+  color: #323638 !important;
 }
 
-.main {
-    letter-spacing: 0.1em !important;
-    color: #323638 !important;
-
+.reveal section.slide h1 {
+  color: #323638 !important;
+  font-size: 50px !important;
+  letter-spacing: 0.1em !important;
 }
 
-.paragraph {
-    font-size: 50px !important;
+.reveal section.slide h2{
+  color: #323638 !important;
+  font-size: 50px !important;
+  letter-spacing: 0.1em !important;
 }
 
 .backgrounds::before {
@@ -27,7 +28,7 @@ body {
     top: 10px;
     right: 15px;
     z-index: 1000;
-  }
+}
 
 .image {
     height: 400px;
