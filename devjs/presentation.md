@@ -5,9 +5,8 @@ parallaxBackgroundHorizontal: 0
 parallaxBackgroundVertical: 0
 ---
 
-# Stare, nowe i najnowsze - jak podążać za zmianami trendów
+# {data-background-image="./assets/pierwszyslajd.png"}
 
-Piotr Rygielski & Nikola Adamus
 
 # Kilka słów o nas...
 
@@ -38,6 +37,8 @@ slajd
 ![](assets/refactoring.gif)
 
 ## Nadchodzi nowe...
+
+![](assets/oldlive.png)
 
 ## Powody biznesowe
 
@@ -193,3 +194,5 @@ input[type="text"]:not([data-r-pro]) {
 # Wielkie dzięki!
 
 ![](assets/thatsall.png){.image}
+
+# Pytania? Dyskusja?
