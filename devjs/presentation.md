@@ -39,17 +39,20 @@ slajd
 ## Nadchodzi nowe...
 
 ![](assets/oldlive.png)
+![](assets/newlive.png)
+![](assets/oldgal.png)
+![](assets/newgal.png)
 
 ## Powody biznesowe
 
-* Konieczność znalezienia nowych członków zespołu
-* Opłacalność utrzymania
+* Konieczność znalezienia nowych członków zespołu - ludzi, którzy będą chcieli w tym pisać
+* Opłacalność utrzymania - czy warto?
 
 
 ## Powody techniczne
 
-* Łatwiej napisać to od nowa
-* Lepsza elastyczność kodu
+* Łatwiej napisać to od nowa z uwagi na wiek kodu
+* Lepsza elastyczność kodu oraz możliwości poprawienia pewnych rzeczy
 
 ## Stack technologiczny
 
